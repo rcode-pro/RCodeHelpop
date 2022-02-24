@@ -17,17 +17,19 @@ public class Helpop implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
+        boolean zwrot= true;
         if (!(sender instanceof Player player)) {
-            return true;
+            return zwrot;
         }
         String permisja = Main.getInstance().getConfig().getString("permssion");
         if (args.length < 1) {
-            return true;
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.getInstance().getConfig().getString("noarguments")));
+            return zwrot;
         }
         if (cool.hasCool(player.getUniqueId(), 5)) {
             long time = cool.czasCool(player.getUniqueId(), 5);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.getInstance().getConfig().getString("cooldownMSG").replace("{TIME}", String.valueOf(time))));
-            return true;
+            return zwrot;
         }
         cool.setCool(player.getUniqueId());
         String wiadomosc = String.join(" ", args);
@@ -37,6 +39,6 @@ public class Helpop implements CommandExecutor {
                         ChatColor.translateAlternateColorCodes('&', Main.getInstance()
                                 .getConfig().getString("prefix").replace("{MESSAGE}", wiadomosc).replace("{PLAYER}", player.getName())))
                 );
-        return true;
+        return zwrot;
     }
 }

@@ -10,4 +10,6 @@ prefix: "&8[&cHelpop&8] &7{PLAYER} &9->> &7{MESSAGE}"
 
 
 
-cooldownMSG: "Cooldown {TIME}"
+cooldownMSG: "&cCooldown {TIME}"
+
+noarguments: "&8> &cNo Message!"

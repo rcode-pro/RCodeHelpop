@@ -18,7 +18,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         super.onDisable();
-        getLogger().log(Level.INFO, "§aRCodeHelpop disabled!");
+        getLogger().log(Level.INFO, "§cRCodeHelpop disabled!");
     }
 
 
