@@ -1,0 +1,9 @@
+main: rCode.help.Main
+authors:
+  - [RCode]
+name: RCodeHelpop
+version: 1.1
+description: "https://dc.rCode.pro"
+commands:
+  helpop:
+    aliases: [support]

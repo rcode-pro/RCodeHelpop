@@ -1,0 +1,13 @@
+#RCode
+
+permission: "rcode.helpop"
+
+
+#{PLAYER} = sender nickname
+#{MESSAGE} = sender message
+prefix: "&8[&cHelpop&8] &7{PLAYER} &9->> &7{MESSAGE}"
+
+
+
+
+cooldownMSG: "Cooldown {TIME}"
